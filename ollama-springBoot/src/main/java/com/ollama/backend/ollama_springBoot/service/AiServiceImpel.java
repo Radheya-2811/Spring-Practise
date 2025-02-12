@@ -14,4 +14,8 @@ public class AiServiceImpel implements AiService{
     public String askAi(String question) {
         return client.prompt(question).call().content();
     }
+
+    public Flux<String> stringResponse(String question){
+        return this.client.prompt().user(question).stream().content();
+    }
 }
