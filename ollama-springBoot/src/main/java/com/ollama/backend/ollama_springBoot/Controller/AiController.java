@@ -26,10 +26,10 @@ public class AiController {
         return new ResponseEntity<>(respnse, HttpStatus.OK);
     }
 
-    @GetMapping
-    public Flux<String> streamAi(
-            @RequestParam(value = "query", required = false,defaultValue = "How can you help me?") String query
-    ){
-        return  aiService.stringResponse(query);
-    }
+//    @GetMapping
+//    public Flux<String> streamAi(
+//            @RequestParam(value = "query", required = false,defaultValue = "How can you help me?") String query
+//    ){
+//        return  aiService.stringResponse(query);
+//    }
 }
